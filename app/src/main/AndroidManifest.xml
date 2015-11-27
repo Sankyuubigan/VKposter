@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.timyr.vkposter" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.timyr.vkposter.Application"
+        android:allowBackup="true"
+        android:label="Постер ВКонтакте"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.timyr.vkposter.LoginActivity"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <data android:scheme="vk3974615" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.timyr.vkposter.TestActivity" />
+        <activity android:name="com.timyr.vkposter.ApiCallActivity" />
+
+    </application>
+
+</manifest>
