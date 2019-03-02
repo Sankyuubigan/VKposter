@@ -1,4 +1,4 @@
-package com.timyr.vkposter;
+package com.nilden.vkposter;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

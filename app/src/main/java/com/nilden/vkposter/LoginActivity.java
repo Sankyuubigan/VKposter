@@ -1,9 +1,8 @@
-package com.timyr.vkposter;
+package com.nilden.vkposter;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,22 +13,12 @@ import com.vk.sdk.VKCallback;
 import com.vk.sdk.VKScope;
 import com.vk.sdk.VKSdk;
 import com.vk.sdk.api.VKError;
-import com.vk.sdk.util.VKUtil;
 
 
-/**
- * Activity which displays a login screen to the user, offering registration as
- * well.
- */
 public class LoginActivity extends FragmentActivity {
 
     private boolean isResumed = false;
 
-    /**
-     * Scope is set of required permissions for your application
-     *
-     * @see <a href="https://vk.com/dev/permissions">vk.com api permissions documentation</a>
-     */
     private static final String[] sMyScope = new String[]{
             VKScope.FRIENDS,
             VKScope.WALL,
@@ -44,8 +33,6 @@ public class LoginActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-//        String[] fingerprints = VKUtil.getCertificateFingerprint(this, this.getPackageName());
-//        Log.e("my", "" + fingerprints[0]);
         VKSdk.wakeUpSession(this, new VKCallback<VKSdk.LoginState>() {
             @Override
             public void onResult(VKSdk.LoginState res) {
@@ -71,8 +58,6 @@ public class LoginActivity extends FragmentActivity {
             }
         });
 
-//        String[] fingerprint = VKUtil.getCertificateFingerprint(this, this.getPackageName());
-//        Log.d("Fingerprint", fingerprint[0]);
     }
 
     private void showLogout() {

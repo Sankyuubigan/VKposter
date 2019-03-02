@@ -9,12 +9,12 @@ android {
             storePassword '123456'
         }
     }
-    compileSdkVersion 23
+    compileSdkVersion 28
     buildToolsVersion "23.0.2"
     defaultConfig {
-        applicationId "com.timyr.vkposter"
+        applicationId "com.nilden.vkposter"
         minSdkVersion 14
-        targetSdkVersion 23
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
     }
@@ -29,6 +29,6 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.android.support:appcompat-v7:28.0.0'
     compile project(':vksdk_library')
 }

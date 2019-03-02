@@ -1,8 +1,8 @@
-package com.timyr.vkposter;
+package com.nilden.vkposter;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -17,7 +17,7 @@ import com.vk.sdk.api.VKRequest;
 import com.vk.sdk.api.VKRequest.VKRequestListener;
 import com.vk.sdk.api.VKResponse;
 
-public class ApiCallActivity extends ActionBarActivity {
+public class ApiCallActivity extends AppCompatActivity {
 
     private VKRequest myRequest;
 

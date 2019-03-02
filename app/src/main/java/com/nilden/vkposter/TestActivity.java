@@ -1,6 +1,5 @@
-package com.timyr.vkposter;
+package com.nilden.vkposter;
 
-import android.app.FragmentManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -10,17 +9,15 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
-import android.support.v4.app.Fragment;
+
 import com.timyr.vkposter.R;
-import com.vk.sdk.VKSdk;
 import com.vk.sdk.api.VKApi;
 import com.vk.sdk.api.VKApiConst;
 import com.vk.sdk.api.VKBatchRequest;
@@ -39,7 +36,6 @@ import com.vk.sdk.api.model.VKWallPostResult;
 import com.vk.sdk.api.photo.VKImageParameters;
 import com.vk.sdk.api.photo.VKUploadImage;
 import com.vk.sdk.dialogs.VKShareDialog;
-import com.vk.sdk.payments.VKPaymentsCallback;
 
 import org.json.JSONArray;
 
@@ -49,7 +45,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-public class TestActivity extends ActionBarActivity {
+public class TestActivity extends AppCompatActivity {
 
 	private static final int[] IDS = {R.id.users_get, R.id.friends_get, R.id.messages_get, R.id.dialogs_get,
 			R.id.captcha_force, R.id.upload_photo, R.id.wall_post, R.id.wall_getById, R.id.test_validation,
@@ -64,25 +60,7 @@ public class TestActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_test);
-//		VKSdk.requestUserState(this, new VKPaymentsCallback() {
-//			@Override
-//			public void onUserState(boolean userIsVk) {
-//				Log.e("my", "fgfhgghhjh");
-//			}
-//		});
-//		VKSdk.requestUserState(TestActivity.this, new VKPaymentsCallback() {
-//			@Override
-//			public void onUserState(final boolean userIsVk) {
-//
-//				Log.e("my", "onUserState");
-//				runOnUiThread(new Runnable() {
-//					@Override
-//					public void run() {
-//						Toast.makeText(TestActivity.this, userIsVk ? "user is vk's" : "user is not vk's", Toast.LENGTH_SHORT).show();
-//					}
-//				});
-//			}
-//		});
+
 		if (getSupportActionBar() != null) {
 			getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		}
@@ -100,9 +78,6 @@ public class TestActivity extends ActionBarActivity {
 		return super.onOptionsItemSelected(item);
 	}
 
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
 	public static class PlaceholderFragment extends Fragment implements View.OnClickListener {
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
